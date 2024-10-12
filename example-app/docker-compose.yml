@@ -51,6 +51,23 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+    phpmyadmin:
+        image: phpmyadmin:latest
+        platform: linux/arm64/v8
+        build:
+            context: ./
+            dockerfile: Dockerfile.phpmyadmin
+        links:
+            - mysql:mysql
+        ports:
+            - 8080:80
+        environment:
+            MYSQL_USERNAME: '${DB_USERNAME}'
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            PMA_HOST: mysql
+        networks:
+            - sail
+    # Redis
     redis:
         image: 'redis:alpine'
         ports:
