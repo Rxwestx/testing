@@ -1,10 +1,9 @@
 <?php
 
-// use Ap/p\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
-
-Route::get('/test', [TestController::class, 'test'])->name('test');
+use App\Http\Controllers\PostController;
 
 
 Route::get('/', function () {
@@ -21,4 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::get('/test', [TestController::class, 'test'])->name('test');
+
+Route::get('post/create', [PostController::class, 'create']);
+    Route::post('post', [PostController::class,'store'])->name('post.store');
 require __DIR__.'/auth.php';
