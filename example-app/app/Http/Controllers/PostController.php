@@ -11,10 +11,9 @@ class PostController extends Controller
         return view('post.create');
     }
     public function index() {
-        $posts = Post::all();
+        $posts = Post::with('user')->get(  );
         return view('post.index', compact('posts'));
     }
-
     public function store(Request $request) {
         // $post = Post::create([
         //     'title' => $request->title,
