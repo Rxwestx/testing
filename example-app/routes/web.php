@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -20,25 +20,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::get('/test', [TestController::class, 'test'])->name('test');
-
-Route::get('post/create', [PostController::class, 'create']);
-Route::get('post', [PostController::class, 'index'])
-->name('post.index');
-Route::get('post/show/{post}', [PostController::class,'show'])
-->name('post.show');
-
-Route::get('post/{post}/edit', [PostController::class,'edit'])
-->name('post.edit');
-Route::patch('post/{post}', [PostController::class,'update'])
-->name('post.update');
-
-
-Route::delete('post/{post}', [PostController::class,'destroy'])
-->name('post.destroy');
-
-Route::post('post', [PostController::class,'store'])->name('post.store');
 require __DIR__.'/auth.php';
 
 
