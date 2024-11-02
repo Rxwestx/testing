@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\PostController;
 
+Route::resource('post', Postcontroller::class);
 Route::get('/', function () {
     return view('welcome');
 });
