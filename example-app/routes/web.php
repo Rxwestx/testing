@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
-Route::resource('post', Postcontroller::class);
+Route::resource('post', PostController::class);
 Route::get('/', function () {
     return view('welcome');
 });
