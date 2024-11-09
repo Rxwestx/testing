@@ -28,7 +28,7 @@
                     <x-input-error :messages="$errors->get('body')" class="mt-2" />
                 <textarea name="body" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30"
                     rows="5">
-                {{old('body', $post->body)}}
+                {{old('body',$post->body)}}
                 </textarea>
             </div>
             <x-primary-button class="mt-4">

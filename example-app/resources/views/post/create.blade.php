@@ -25,8 +25,7 @@
                 <div class="w-full flex flex-col">
                     <label for="body" class="font-semibole mt-4">本文</label>
                     <x-input-error :messages="$errors->get('body')" class="mt-2" />
-                <textarea name="body" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30"
-                    rows="5">
+                <textarea name="body" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="5">
                 {{old('body')}}
                 </textarea>
             </div>

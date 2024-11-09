@@ -79,7 +79,7 @@ class PostController extends Controller
      */
     public function destroy(Request $request,Post $post)
     {
-        $post->delete;
+        $post->delete();
         $request->session()->flash('message', '削除しました');
         return redirect()->route('post.index');
 
