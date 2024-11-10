@@ -39,9 +39,10 @@
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
+            <x-primary-button class="ms-3" id="login">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
     </form>
+    <script src="{{ asset('js/app.js') }}"></script>
 </x-guest-layout>
