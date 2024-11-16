@@ -11,8 +11,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    {{-- 更新するたびに、日付変更すること --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css?20241109') }}">
+    {{-- 更新するたびに、日付変更することもう一回提出後--}}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
     <!-- Scripts -->
